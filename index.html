@@ -1,40 +1,128 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- TITLE -->
         <header class="header">
-            <h1>Tolga's Diner</h1>
-            <h3 class="intro">The best food in the country.</h3>
+            <div>
+                <p class="title">Tolga's Diner</p>
+                <p class="intro">The best food in the country.</p>
+            </div>
         </header>
-        <!-- MENU -->
-        <div class="menu">
-            <!-- MENU ITEM -->
-            <div class="item-container">
-                <p class="icon">🍕</p>
-                <div class="item">
-                    <div class="item-details">
-                        <div>
-                            <h3 class="item-name">Pizza</h3>
+        <!-- CONTENT -->
+        <div class="main-content">
+            <!-- MENU -->
+            <section>
+                <!-- MENU ITEM -->
+                <div class="item-container">
+                    <p class="icon">🍕</p>
+                    <div class="item">
+                        <div class="item-details">
+                            <div>
+                                <p class="item-name">Pizza</p>
+                            </div>
+                            <div>
+                                <p class="ingredients">ingredient, ingredient, ingredient</p>
+                            </div>
+                            <div>
+                                <p class="price">$15</p>
+                            </div>
                         </div>
                         <div>
-                            <p class="ingredients">ingredient, ingredient, ingredient</p>
+                            <button class="add-btn">+</button>
                         </div>
-                        <div>
-                            <p class="price">$15</p>
-                        </div>
-                    </div>
-                    <div>
-                        <button class="add-btn">+</button>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- CART -->
-        <div>
-
+                <!-- MENU ITEM -->
+                <div class="item-container">
+                    <p class="icon">🍕</p>
+                    <div class="item">
+                        <div class="item-details">
+                            <div>
+                                <p class="item-name">Pizza</p>
+                            </div>
+                            <div>
+                                <p class="ingredients">ingredient, ingredient, ingredient</p>
+                            </div>
+                            <div>
+                                <p class="price">$15</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- MENU ITEM -->
+                <div class="item-container">
+                    <p class="icon">🍕</p>
+                    <div class="item">
+                        <div class="item-details">
+                            <div>
+                                <p class="item-name">Pizza</p>
+                            </div>
+                            <div>
+                                <p class="ingredients">ingredient, ingredient, ingredient</p>
+                            </div>
+                            <div>
+                                <p class="price">$15</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="add-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CART -->
+            <section class="cart-container hidden">
+                <p>Your Order</p>
+                <div class="cart-element">
+                    <div class="element-name">
+                    <span>Pizza</span>
+                    <button class="remove-btn">remove</button>
+                    </div>
+                    <p>$14</p>
+                </div>
+                <div class="cart-element">
+                    <div class="element-name">
+                    <span>Pizza</span>
+                    <button class="remove-btn">remove</button>
+                    </div>
+                    <p>$14</p>
+                </div>
+                <div class="total-display">
+                    <p class="inline">Total Price:</p>
+                    <p class="inline">$28</p>
+                </div>
+                <button class="confirm-btn">
+                    Complete Order
+                </button>
+            </section>
+            <!-- PAYMENT MODAL -->
+            <section class="modal hidden">
+                    <form class="payment-form">
+                        <p class="card-title">Enter Card Details</p>
+                        <input type="text" class="text-input" placeholder="Enter your name">
+                        <input type="text" class="text-input" placeholder="Enter card number">
+                        <input type="text" class="text-input" placeholder="Enter CVV">
+                        <div class="center">
+                            <span>I have read and accept terms</span>
+                            <input type="checkbox">
+                        </div>
+                        <button type="submit" class="confirm-btn">Pay</button>                     
+                    </form>
+            </section>
+            <!-- SUCCESS -->
+            <section>
+                <div class="success hidden">
+                    <p>Thanks, User! Your order is on its way!</p>
+                </div>
+            </section>
         </div>
         <script src="index.js" type="module"></script> 
     </body>
