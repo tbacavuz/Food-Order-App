@@ -1,10 +1,11 @@
 body{
     width: 600px;
-    height: 1161px;
     margin: auto;
     font-family: Smythe;
     right: 0px;
     left: 0px;
+    border: 1px solid #d2d2d2;
+    font-size: 25px;
 }
 
 section{
@@ -52,7 +53,7 @@ p{
     display: flex;
     border-bottom: 1px solid;
     border-color: #d2d2d2;
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 .item{
@@ -80,7 +81,6 @@ p{
 }
 
 .price{
-    font-size: 20px;
     margin-top: 10px;
 }
 
@@ -121,6 +121,7 @@ p{
     height: 60px;
     margin: 50px 0;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .remove-btn{
@@ -136,7 +137,6 @@ p{
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    font-size: 28px;
     font-family: Verdana;
 }
 
@@ -150,7 +150,6 @@ p{
     justify-content: space-between;
 }
 span{
-    font-size: 28px;
     margin-right: 15px;
 }
 
@@ -179,7 +178,6 @@ font-size: 20px;
     height: 550px;
     border-radius: 4px;
     background-color: #ffff;
-    /* box-shadow: 0px 0px 6px 2px #666; */
     box-shadow: 5.186544418334961px 5.186544418334961px 255.43731689453125px 0px #00000080;
 
 }
