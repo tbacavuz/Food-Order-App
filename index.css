@@ -133,7 +133,7 @@ p{
     font-size: 12px;
 }
 
-.payment-form{
+.form{
     display: flex;
     flex-direction: column;
     width: 100%;

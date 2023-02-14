@@ -23,24 +23,22 @@
             <section class="cart-container " id="cart-container">
             </section>
             <!-- PAYMENT MODAL -->
-            <section class="modal hidden">
-                    <form class="payment-form">
+            <section class="modal" id="modal">
+                    <form class="form" id="payment-form">
                         <p class="card-title">Enter Card Details</p>
-                        <input type="text" class="text-input" placeholder="Enter your name">
-                        <input type="text" class="text-input" placeholder="Enter card number">
-                        <input type="text" class="text-input" placeholder="Enter CVV">
+                        <input type="text" name="name" class="text-input" placeholder="Enter your name" required>
+                        <input type="text" name="card-no" class="text-input" placeholder="Enter card number" >
+                        <input type="password" name="cvv" class="text-input" placeholder="Enter CVV">
                         <div class="center">
                             <span>I have read and accept terms</span>
-                            <input type="checkbox">
+                            <input type="checkbox" name="consent" >
                         </div>
                         <button type="submit" class="confirm-btn">Pay</button>                     
                     </form>
             </section>
             <!-- SUCCESS -->
-            <section>
-                <div class="success hidden">
-                    <p>Thanks, User! Your order is on its way!</p>
-                </div>
+            <section id="success-container">
+
             </section>
         </div>
         <script src="index.js" type="module"></script> 

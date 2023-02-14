@@ -1,4 +1,6 @@
 import { menuArray } from "./data.js";
+const paymentForm = document.getElementById("payment-form");
+const paymentModal =  document.getElementById("modal") 
 let cart = [];
 
 document.addEventListener('click', function(e){
@@ -9,10 +11,7 @@ document.addEventListener('click', function(e){
         handleRemoveClick(+e.target.dataset.remove)
     }
     if(e.target.dataset.order){
-        handleOrderClick(+e.target.dataset.order)
-    }
-    if(e.target.dataset.pay){
-        handlePayClick(+e.target.dataset.pay)
+        paymentModal.classList.remove("hidden")
     }
 })
 
@@ -29,10 +28,6 @@ function handleRemoveClick(itemId){
     const index = cart.indexOf(itemId);
     cart.splice(index,1);    
     renderCart()
-}
-
-function handleOrderClick(itemId){
-    
 }
 
 function getMenuHtml(){
@@ -91,6 +86,20 @@ function getCartHtml(){
     return cartHtml;
 }
 
+function getSuccessHtml(name){
+    console.log(name);
+    let successHtml = `<div class="success">
+                            <p>Thanks, ${name}! Your order is on its way!</p>
+                        </div>`
+    return successHtml;
+}
+
+document.addEventListener('submit',function(e){
+    e.preventDefault();
+    const paymentFormData = new FormData(paymentForm);
+    const userName = paymentFormData.get("name");
+    renderSuccess(userName)
+})
 function getTotal(){
     let total = 0;
     cart.forEach(function(cartItem){
@@ -99,13 +108,28 @@ function getTotal(){
     return total;
 }
 
+function reset(){
+    cart = [];
+    renderCart();
+    paymentForm.reset();
+    paymentModal.classList.add("hidden");
+}
+
 function renderMenu(){
     document.getElementById('menu').innerHTML = getMenuHtml()
 }
 
 function renderCart(){
+    document.getElementById('success-container').classList.add("hidden")
     const targetContainer = document.getElementById('cart-container')
     targetContainer.innerHTML = getCartHtml()
+}
+
+function renderSuccess(name){
+    const targetContainer = document.getElementById('success-container')
+    reset()
+    targetContainer.innerHTML = getSuccessHtml(name);
+    targetContainer.classList.remove("hidden");
 }
 
 renderMenu()
