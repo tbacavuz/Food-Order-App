@@ -23,15 +23,15 @@
             <section class="cart-container " id="cart-container">
             </section>
             <!-- PAYMENT MODAL -->
-            <section class="modal" id="modal">
+            <section class="modal hidden" id="modal">
                     <form class="form" id="payment-form">
                         <p class="card-title">Enter Card Details</p>
                         <input type="text" name="name" class="text-input" placeholder="Enter your name" required>
-                        <input type="text" name="card-no" class="text-input" placeholder="Enter card number" >
-                        <input type="password" name="cvv" class="text-input" placeholder="Enter CVV">
+                        <input type="text" name="card-no" class="text-input" placeholder="Enter card number" required>
+                        <input type="password" name="cvv" class="text-input" placeholder="Enter CVV" required>
                         <div class="center">
                             <span>I have read and accept terms</span>
-                            <input type="checkbox" name="consent" >
+                            <input type="checkbox" name="consent" required>
                         </div>
                         <button type="submit" class="confirm-btn">Pay</button>                     
                     </form>
