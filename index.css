@@ -71,6 +71,7 @@ p{
     border: 1px solid #d2d2d2;
     background-color: transparent;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .item-name{
@@ -122,6 +123,7 @@ p{
     margin: 50px 0;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .remove-btn{
@@ -130,6 +132,7 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #BBBBBB;
     font-size: 12px;
+    cursor: pointer;
 }
 
 .payment-form{
@@ -149,6 +152,7 @@ p{
     display: flex;
     justify-content: space-between;
 }
+
 span{
     margin-right: 15px;
 }
@@ -190,4 +194,5 @@ font-size: 20px;
     background: #ECFDF5;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
