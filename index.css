@@ -129,13 +129,13 @@ p{
 .remove-btn{
     border: none;
     background-color: transparent;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
     color: #BBBBBB;
     font-size: 12px;
     cursor: pointer;
 }
 
-.payment-form{
+.form{
     display: flex;
     flex-direction: column;
     width: 100%;
